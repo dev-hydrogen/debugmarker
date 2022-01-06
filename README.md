@@ -2,8 +2,10 @@
 1.16.5-1.18.1 Debug Marker API
 Just clone the DebugMarker.java class into your project, resolve dependencies and you should be good to go!
 
+https://user-images.githubusercontent.com/96733109/148328044-96de7b38-12c3-4ce3-83c6-25faf037be27.mp4
+
 ## Requires Netty and ProtocolLib dependencies
-Netty is included within minecraft, so if you are using maven, you can use the following code in your pom.xml:
+Netty is included within minecraft, so if you are using maven, just use the following in your pom.xml:
 ```
         <dependency>
             <groupId>org.spigotmc</groupId>
