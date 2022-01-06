@@ -24,4 +24,4 @@ a) a List of Player's
 
 b) Player's within a distance of the DebugMarker
 
-c) Use the static method stopAll(Location location, int distance) to stop all DebugMarker's for any player within a set distance of a specified location.
+c) Or you can use the static method stopAll(Location location, int distance) to stop all DebugMarker's for any player within a set distance of a specified location.
