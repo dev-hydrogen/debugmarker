@@ -32,7 +32,6 @@ public class DebugMarker {
         for (Player player : showTo) {
             ProtocolLibrary.getProtocolManager().sendServerPacket(player, marker);
         }
-        seen.addAll(showTo);
     }
     public DebugMarker(org.bukkit.Location location, Color color, String name, int duration) {
         this.location = location;
@@ -63,8 +62,9 @@ public class DebugMarker {
         Runnable run = () -> {
             for (Player p : location.getWorld().getPlayers()) {
                 if (System.currentTimeMillis() > endTime) {
-                    executorService.shutdown();
+                    seen.clear();
                     callback.run();
+                    executorService.shutdown();
                     return;
                 }
                 if (isCloseEnough(p.getLocation()) && !seen.contains(p)) {
@@ -82,6 +82,7 @@ public class DebugMarker {
     }
     
     public void stop() {
+        seen.clear();
         executorService.shutdownNow();
     }
     
@@ -157,3 +158,4 @@ public class DebugMarker {
         STOP_ALL_MARKERS.getSpecificModifier(PacketDataSerializer.class).write(0, new PacketDataSerializer(Unpooled.buffer()));
     }
 }
+
