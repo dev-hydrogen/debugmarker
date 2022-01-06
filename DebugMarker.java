@@ -54,6 +54,9 @@ public class DebugMarker {
         }); // do-nothing runnable
     }
     public void start(int distance, Runnable callback) {
+        if (!executorService.isShutdown()) {
+            stop();
+        }
         distanceSquared = distance < 0 ? -1 : distance * distance;
         long startTime = System.currentTimeMillis();
         long endTime = System.currentTimeMillis() + duration;
@@ -82,6 +85,16 @@ public class DebugMarker {
     }
     
     public void stop() {
+        setData(location, new Color(0, 0, 0, 0), "", 0);
+        for (Player p : location.getWorld().getPlayers()) {
+            if (distanceSquared == -1 || this.location.distanceSquared(p.getLocation()) <= distanceSquared) {
+                try {
+                    ProtocolLibrary.getProtocolManager().sendServerPacket(p, marker);
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
         seen.clear();
         executorService.shutdownNow();
     }
