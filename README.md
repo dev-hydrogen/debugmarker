@@ -1,5 +1,8 @@
 # debugmarker
-1.16.5-1.18.1 Debug Marker API
+1.16.5-1.18.1 Debug Marker API, allowing developers to create their own debug markers, which are slightly-bigger-than-blocks that can be walked through and can have any custom color and name!
+
+In newer versions, you must use a resource pack shader if you want any other colors than black or green, as newer versions (1.17+) limits debug markers to only show the green channel. An example of a resource pack which would accomplish this is here: https://github.com/mworzala/canary/tree/448fa848c43370371d955692ed5d8fba71f76155/resourcepack/src/assets/minecraft/shaders/core
+
 Just clone the DebugMarker.java class into your project, resolve dependencies and you should be good to go!
 
 https://user-images.githubusercontent.com/96733109/148328044-96de7b38-12c3-4ce3-83c6-25faf037be27.mp4
