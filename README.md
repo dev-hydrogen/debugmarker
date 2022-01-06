@@ -19,6 +19,9 @@ At any time, you can call setLocation(), setColor(), setName(), or setDuration()
 
 Also due to minecrafts limitations, a debug marker can not be individually stopped after starting it. You can, however, stop the debug marker from showing to any new players with stop(). 
 You can also call stopAll() to stop **all** debug markers in the world for 
+
 a) a List of Player's 
+
 b) Player's within a distance of the DebugMarker
+
 c) Use the static method stopAll(Location location, int distance) to stop all DebugMarker's for any player within a set distance of a specified location.
