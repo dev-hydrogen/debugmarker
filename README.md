@@ -22,10 +22,9 @@ Netty is included within minecraft, so if you are using maven, just use the foll
 ## Usage
 Instantiate a new DebugMarker with either `DebugMarker(Location location, java.awt.Color color, String name, int duration)` or `DebugMarker(Location location, java.awt.Color color, String name, int duration, List<Player> showTo)` which automatically shows the debug marker to the provided list of players.
 
-At any time, you can call setLocation(), setColor(), setName(), or setDuration() to set these variables to anthing you want. Keep in mind that due to minecrafts limitations, these changes *will only show to players seeing the marker for the first time, or after using the start(int distance) function*
+At any time, you can call setLocation(), setColor(), setName(), or setDuration() to set these variables to anthing you want. You will have to call start() again to send these changes to players.
 
-Also due to minecrafts limitations, a debug marker can not be individually stopped after starting it. You can, however, stop the debug marker from showing to any new players with stop(). 
-You can also call stopAll() to stop **all** debug markers in the world for 
+You can call either stop() to stop an individual marker, or stopAll() to stop all markers in the world for
 
 a) a List of Player's 
 
