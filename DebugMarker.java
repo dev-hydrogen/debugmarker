@@ -58,7 +58,6 @@ public class DebugMarker {
             stop();
         }
         distanceSquared = distance < 0 ? -1 : distance * distance;
-        long startTime = System.currentTimeMillis();
         long endTime = System.currentTimeMillis() + duration;
         executorService = Executors.newScheduledThreadPool(1);
         // probably not the most efficient way of doing this
