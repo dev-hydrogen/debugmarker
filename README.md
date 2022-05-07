@@ -1,5 +1,5 @@
 # debugmarker
-1.16.5-1.18.1 Debug Marker API, allowing developers to create their own debug markers, which are slightly-bigger-than-blocks that can be walked through and can have any custom color (including alpha) and name!
+1.16.5-1.18.2 Debug Marker API, allowing developers to create their own debug markers, which are slightly-bigger-than-blocks that can be walked through and can have any custom color (including alpha) and name!
 
 In newer versions, you must use a resource pack shader if you want any other colors than black or green, as newer versions (1.17+) limits debug markers to only show the green channel. An example of a resource pack which would accomplish this is here: https://github.com/mworzala/canary/tree/448fa848c43370371d955692ed5d8fba71f76155/resourcepack/src/assets/minecraft/shaders/core
 (Personally, i would recommend changing position_color.fsh to have `if (ColorModulator == vec4(0, 1, 0, 0.75)) { fragColor = color * vec4(1, 1, 1, 1);}` as this allows for full usage of the alpha spectrum, instead of being limited at ~204 alpha)
