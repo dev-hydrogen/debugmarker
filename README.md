@@ -8,6 +8,9 @@ Just clone the DebugMarker.java class into your project, resolve dependencies an
 
 https://user-images.githubusercontent.com/96733109/148328044-96de7b38-12c3-4ce3-83c6-25faf037be27.mp4
 
+![debugmarkers](https://github.com/dev-hydrogen/debugmarker/assets/96733109/4116376d-1059-4370-a361-d96c3fff6b16)
+
+
 ## Requires Netty and ProtocolLib dependencies
 Netty is included within minecraft, so if you are using maven, just use the following in your pom.xml: (assuming you have built spigot with buildtools before)
 ```
